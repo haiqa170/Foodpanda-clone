@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foodpanda Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-logo">
+          <a href="/">
+            <img src="Images/foodpanda-logo.png" alt="Foodpanda Logo" />
+            <span class="brand-text">foodpanda</span>
+          </a>
+        </div>
+
+        <div class="navbar-actions">
+          <button class="btn btn-outline">Log in</button>
+
+          <button class="btn btn-filled">Sign up for free delivery</button>
+
+          <div class="language-selector">
+            <i class="fa-solid fa-globe"></i>
+            <span>EN</span>
+            <i class="fa-solid fa-chevron-down" style="color: #ff2b85"></i>
+          </div>
+
+          <button class="cart-btn" disabled title="Your cart is empty">
+            <i class="fa-solid fa-shopping-bag"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-side left">
+        <img src="Images/home-img-left.png" alt="Food Left" />
+      </div>
+
+      <div class="hero-center">
+        <h1>Sign up for free delivery on your first order</h1>
+
+        <div class="search-row">
+          <div class="input-wrapper">
+            <input name="search" type="text" placeholder="Enter your address" />
+            <span class="locate-icon">
+              <i class="fa-solid fa-crosshairs"></i>
+              <span>Locate me</span>
+            </span>
+          </div>
+
+          <button class="find-btn">Find food</button>
+        </div>
+
+        <a href="#" class="login-link">Log in to see saved addresses</a>
+      </div>
+
+      <div class="hero-side right">
+        <img src="Images/home-img-right.png" alt="Panda Right" />
+      </div>
+    </section>
+
+    <!-- container  -->
+    <section class="slider-section">
+      <h2>Daily deals on foodpanda</h2>
+
+      <div class="slider-wrapper">
+        <button class="slider-btn left" onclick="scrollSlider('left')">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="slider" id="cardSlider">
+          <!-- Card 1 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 1.png" alt="Desi Treat" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 20% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Desi Treat</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.3
+                  <span class="light">(56)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 15-30 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.79</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 2.png" alt="Suadish Biryani" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 10% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Suadish Biryani</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.4
+                  <span class="light">(100+)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 5-20 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.129</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 3.png" alt="Bannu Beef Pulao" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> Up to 10% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Bannu Beef Pulao</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.3
+                  <span class="light">(3000+)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 5-20 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.129</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 4.png" alt="Lahori Nashta" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 10% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Special Lahori Nas...</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.7
+                  <span class="light">(80)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 20-35 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.199</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 5.png" alt="Karachi Rehman" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 10% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Karachi Rehman...</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.6
+                  <span class="light">(1000+)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 15-30 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.149</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 6.png" alt="Annie Kitchen" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 10% off selected items
+              </div>
+              <div class="home-chef">Home chef</div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Annie Kitchen</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.9
+                  <span class="light">(1000+)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 10-25 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.75</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 7.png" alt="Kalsoom Kitchen" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 20% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Kalsoom Kitchen</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.6
+                  <span class="light">(500+)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 15-30 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.79</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 8.png" alt="Special Bannu Beef" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 10% off
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Special Bannu Bee...</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 3.7
+                  <span class="light">(44)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 10-25 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.129</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 9.png" alt="Suadish Biryani" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 20% off selected items
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Suadish Biryani</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 3.9
+                  <span class="light">(100+)</span>
+                </div>
+              </div>
+              <div class="cuisine">$ · Pakistani</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 15-30 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.149</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 10 -->
+          <div class="card">
+            <div class="card-img">
+              <img src="Images/Card 10.png" alt="Panda Chef" />
+              <div class="badge">
+                <i class="fa-solid fa-percent"></i> 10% off
+              </div>
+              <div class="home-chef">Home chef</div>
+            </div>
+            <div class="card-content">
+              <div class="title-rating">
+                <h3>Panda Chef</h3>
+                <div class="rating">
+                  <i class="fa-solid fa-star"></i> 4.8
+                  <span class="light">(21)</span>
+                </div>
+              </div>
+              <div class="cuisine">$$ · Chinese</div>
+              <div class="meta">
+                <span><i class="fa-regular fa-clock"></i> 15-30 min</span>
+                <span><i class="fa-solid fa-motorcycle"></i> Rs.75</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="slider-btn right" onclick="scrollSlider('right')">
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+  </body>
+</html>
